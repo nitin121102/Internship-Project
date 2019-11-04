@@ -1,0 +1,26 @@
+<% include ./partials/header %> 
+<% include ./partials/navbar %> 
+
+
+
+
+<div style="margin-top:8%" >
+      
+<div class="ui main text container segment"  >
+    <div class="ui huge header">Login</div>
+    <form class="ui form" action="/login" method="POST">
+        <div class="field">
+            <label style="font-size:20px">Username</label>
+            <input style="padding:15px;font-size:20px" type="text" name="username" placeholder="username">
+        </div>
+        <div class="field">
+            <label style="font-size:20px">Password</label>
+            <input style="padding:15px;font-size:20px" type="password" name="password" placeholder="password">
+        </div>
+        <input class="ui violet big basic button" type="submit">
+    </form>
+</div>
+</div>
+    
+</div>
+<% include ./partials/footer %> 

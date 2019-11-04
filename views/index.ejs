@@ -1,0 +1,53 @@
+
+   <% include  partials/header.ejs %>
+<% include  partials/navbar.ejs %>
+    
+     	<div id="header" style="margin-left:11%">
+				   	<div id="content">
+				   		     	<h1 >Latest And Previous Year Cut-Off Lists</h1>
+								<h3>With nearby a specific college on map</h3>
+							    <hr width="50%" >
+								 <button class="btn btn-warning btn-lg">  Find cut-off by colleges</button>
+								    <p>
+                                       <form action="/home" method="GET" class="form-inline">
+                                           <div class="form-group">
+                                               <input type="text" name="search" placeholder="Colleges search..." class="form-control">
+                                               <input type="submit" value="Search" class="btn btn-default">
+                                           </div>
+                                       </form>
+                                   </p>
+                     </div>
+	   </div>
+              
+     <div class="parallex"></div>
+    
+    
+    <div class="container" style="margin-top:20px">
+    	<div  class="jumbotron">
+    	 <P style="color: Black;font-size:40px ;font-family: "Times New Roman", Times, serif;"> Here Are the list of DU Colleges Where you can find the cutoff-lists and nearby recreaction spots </P>
+    </div> 
+    </div>
+    
+	
+      
+      <div class="container">
+      	   <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% blogs.forEach(function(blog){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= blog.logo %>">
+                   
+                   <p> 
+                   	   <h4><%= blog.name %></h4>
+                       <a href="/home/<%= blog._id %>" class="btn btn-primary">More Info</a>
+                       
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div></div>
+      
+      </div>
+     
+
+		 <% include  partials/footer.ejs %>  
